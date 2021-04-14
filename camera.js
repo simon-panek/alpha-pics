@@ -3,7 +3,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { StyleSheet, Text, View, Button, FlatList, Linking, TouchableOpacity, TextInput, Image } from 'react-native';
 import Header from './Header';
 
-export default function App(){
+export default function CameraChoice({ navigation }){
 
 
   return (
@@ -13,11 +13,19 @@ export default function App(){
         <Text style={styles.text}>
           New Pic Button Here
         </Text>
+        <Button
+        title="Go to New Picture"
+        onPress={() => navigation.navigate('Add Picture')}
+        />
       </View>
       <View style={styles.mainButtonTwo}>
         <Text style={styles.text}>
           Edit Existing Button Here
         </Text>
+        <Button
+        title="Edit Existing"
+        onPress={() => navigation.navigate('Existing Pictures')}
+        />
       </View>
     </View>
   )
@@ -39,7 +47,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: 'white', 
     textAlign: 'center',
-    fontSize: 50
+    fontSize: 25
   }, 
   mainButtonOne: {
     borderWidth: 2,

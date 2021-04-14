@@ -3,7 +3,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { StyleSheet, Text, View, Button, FlatList, Linking, TouchableOpacity, TextInput, Image } from 'react-native';
 import Header from './Header';
 
-export default function App(){
+export default function NumberGame(){
 
 
   return (

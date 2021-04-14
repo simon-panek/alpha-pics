@@ -60,12 +60,12 @@ export default function Home({ navigation }){
       </View>
       <View style={styles.mainButtonThree}>
         <Text style={styles.text}>
-          Camera
+          Pictures
         </Text>
         <Button
-        title="Go to Camera"
-        onPress={() => navigation.navigate('Camera')}
-      />
+        title="Go to Pictures"
+        onPress={() => navigation.navigate('Pictures')}
+        />
       </View>
     </View>
   )
@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#8f4acf',
     color: 'white',
     fontWeight: 'bold',
-    height: '25%',
+    height: '20%',
     width: '90%',
     margin: '5%'
   },
@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#008a05',
     color: 'white',
     fontWeight: 'bold',
-    height: '25%',
+    height: '20%',
     width: '90%',
     margin: '5%'
   },
@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#b03204',
     color: 'white',
     fontWeight: 'bold',
-    height: '10%',
+    height: '20%',
     width: '90%',
     margin: '5%'
   },
