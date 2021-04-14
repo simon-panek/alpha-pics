@@ -5,7 +5,7 @@ import * as Permissions from 'expo-permissions';
 import { Camera } from 'expo-camera';
 import Header from './Header';
 
-export default function Home(){
+export default function Home({ navigation }){
 
   const [cameraPermissions, setCameraPermissions] = useState(false);
 
@@ -44,16 +44,28 @@ export default function Home(){
         <Text style={styles.text}>
           ABC
         </Text>
+        <Button
+        title="Go to ABC"
+        onPress={() => navigation.navigate('ABC')}
+      />
       </View>
       <View style={styles.mainButtonTwo}>
         <Text style={styles.text}>
           123
         </Text>
+        <Button
+        title="Go to 123"
+        onPress={() => navigation.navigate('123')}
+      />
       </View>
       <View style={styles.mainButtonThree}>
         <Text style={styles.text}>
           Camera
         </Text>
+        <Button
+        title="Go to Camera"
+        onPress={() => navigation.navigate('Camera')}
+      />
       </View>
     </View>
   )

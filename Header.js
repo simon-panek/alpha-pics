@@ -1,13 +1,21 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { StyleSheet, Text, View, Button, FlatList, Linking, TouchableOpacity, TextInput, Image} from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+
 
 export default function Header() {
+  
+  const navigation = useNavigation();
 
   return(
     <View>
         <Text style={styles.text}>
           Alpha-Pics
         </Text>
+        <Button
+        title="Go Home"
+        onPress={() => navigation.navigate('Home')}
+      />
     </View>
   )
 }

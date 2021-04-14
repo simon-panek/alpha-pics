@@ -16,11 +16,11 @@ function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="abc" component={ABCScreen} />
+        <Stack.Screen name="ABC" component={ABCScreen} />
         <Stack.Screen name="123" component={NumberScreen} />
-        <Stack.Screen name="camera" component={CameraScreen} />
-        <Stack.Screen name="pics" component={PicsScreen} />
-        <Stack.Screen name="edit" component={EditScreen} />
+        <Stack.Screen name="Camera" component={CameraScreen} />
+        <Stack.Screen name="Pictures" component={PicsScreen} />
+        <Stack.Screen name="Edit" component={EditScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
