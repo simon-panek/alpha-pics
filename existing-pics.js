@@ -3,7 +3,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { StyleSheet, Text, View, Button, FlatList, Linking, TouchableOpacity, TextInput, Image } from 'react-native';
 import Header from './Header';
 
-export default function App(){
+export default function ExistingPics({ navigation }){
 
 
   return (
@@ -18,6 +18,10 @@ export default function App(){
         <Text style={styles.text}>
           Display all pics for a chosen letter / number here
         </Text>
+        <Button
+        title="Edit"
+        onPress={() => navigation.navigate('Edit')}
+        />
       </View>
     </View>
   )
@@ -39,14 +43,14 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: 'white', 
     textAlign: 'center',
-    fontSize: 50
+    fontSize: 15
   }, 
   mainButtonOne: {
     borderWidth: 2,
     backgroundColor: '#8f4acf',
     color: 'white',
     fontWeight: 'bold',
-    height: '25%',
+    height: '15%',
     width: '90%',
     margin: '5%'
   },
@@ -55,7 +59,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#008a05',
     color: 'white',
     fontWeight: 'bold',
-    height: '25%',
+    height: '35%',
     width: '90%',
     margin: '5%'
   },
