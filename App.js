@@ -9,6 +9,8 @@ import CameraScreen from './camera.js';
 import PicsScreen from './existing-pics.js';
 import EditScreen from './edit-pics.js';
 
+const Stack = createStackNavigator();
+
 function App() {
   return (
     <NavigationContainer>

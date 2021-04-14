@@ -3,7 +3,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { StyleSheet, Text, View, Button, FlatList, Linking, TouchableOpacity, TextInput, Image } from 'react-native';
 import * as Permissions from 'expo-permissions';
 import { Camera } from 'expo-camera';
-import Header from './header';
+import Header from './Header';
 
 export default function Home(){
 
