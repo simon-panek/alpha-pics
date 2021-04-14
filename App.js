@@ -40,9 +40,21 @@ export default function App(){
   return (
     <View>
       <Header />
-      <Text style={styles.text}>
-        Hello world.
-      </Text>
+      <View style={styles.mainButtonOne}>
+        <Text style={styles.text}>
+          ABC
+        </Text>
+      </View>
+      <View style={styles.mainButtonTwo}>
+        <Text style={styles.text}>
+          123
+        </Text>
+      </View>
+      <View style={styles.mainButtonThree}>
+        <Text style={styles.text}>
+          Camera
+        </Text>
+      </View>
     </View>
   )
 
@@ -58,10 +70,40 @@ const styles = StyleSheet.create({
     width: '100%'
   },
   text: {
-    marginTop: '15%',
+    // marginTop: '15%',
     padding: '5%',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    color: 'white', 
+    textAlign: 'center',
+    fontSize: 50
   }, 
+  mainButtonOne: {
+    borderWidth: 2,
+    backgroundColor: '#8f4acf',
+    color: 'white',
+    fontWeight: 'bold',
+    height: '25%',
+    width: '90%',
+    margin: '5%'
+  },
+  mainButtonTwo: {
+    borderWidth: 2,
+    backgroundColor: '#008a05',
+    color: 'white',
+    fontWeight: 'bold',
+    height: '25%',
+    width: '90%',
+    margin: '5%'
+  },
+  mainButtonThree: {
+    borderWidth: 2,
+    backgroundColor: '#b03204',
+    color: 'white',
+    fontWeight: 'bold',
+    height: '10%',
+    width: '90%',
+    margin: '5%'
+  },
   cameraView: {
     alignSelf: 'center',
     width: '170%',
