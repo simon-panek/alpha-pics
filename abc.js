@@ -1,7 +1,7 @@
 //import { StatusBar } from 'expo-status-bar';
 import React, { useEffect, useState, useRef } from 'react';
 import { StyleSheet, Text, View, Button, FlatList, Linking, TouchableOpacity, TextInput, Image } from 'react-native';
-import Header from './Header';
+import Header from './header';
 
 export default function App(){
 

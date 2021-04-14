@@ -1,22 +1,58 @@
 //import { StatusBar } from 'expo-status-bar';
 import React, { useEffect, useState, useRef } from 'react';
 import { StyleSheet, Text, View, Button, FlatList, Linking, TouchableOpacity, TextInput, Image } from 'react-native';
+import * as Permissions from 'expo-permissions';
+import { Camera } from 'expo-camera';
 import Header from './header';
 
-export default function App(){
+export default function Home(){
 
+  const [cameraPermissions, setCameraPermissions] = useState(false);
+
+  const getPermissions =  async () => {
+    const statusCamera = await Permissions.getAsync(Permissions.CAMERA);
+    console.log({statusCamera});
+    if(statusCamera !== 'granted') {
+      const statusTwoCamera= await Permissions.askAsync(Permissions.CAMERA);
+      console.log('statusTwoName', {statusTwoCamera});
+    
+      if(statusTwoCamera.status === 'granted'){
+        console.log('Permission granted');
+        setCameraPermissions(true);
+      } else {
+        setCameraPermissions(false);
+      }
+    }
+  }
+
+  useEffect (() => {
+    getPermissions();
+  },[])
+
+  if(cameraPermissions !== true){
+    return <Text style={styles.text}>No camera permissions granted!</Text>
+  }
+  
+  if(cameraPermissions === true){
+    console.log('Permission rendering');
+  }
 
   return (
     <View>
       <Header />
       <View style={styles.mainButtonOne}>
         <Text style={styles.text}>
-          ABC/123 Drop Down Here
+          ABC
         </Text>
       </View>
       <View style={styles.mainButtonTwo}>
         <Text style={styles.text}>
-          Display all pics for a chosen letter / number here
+          123
+        </Text>
+      </View>
+      <View style={styles.mainButtonThree}>
+        <Text style={styles.text}>
+          Camera
         </Text>
       </View>
     </View>
@@ -94,3 +130,4 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   }
 });
+
