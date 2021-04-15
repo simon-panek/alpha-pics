@@ -13,7 +13,7 @@ export default function ABCGame(){
       <Header />
       <View style={styles.mainButtonOne}>
         <Text style={styles.text}>
-          Random ABC pic here
+          Random ABC pic here.
         </Text>
       </View>
       <View style={styles.mainButtonTwo}>
@@ -52,7 +52,7 @@ export default function ABCGame(){
       </View>
       <View style={styles.mainButtonThree}>
         <Text style={styles.text}>
-          Go Button Here
+          Go Button Here. 
         </Text>
       </View>
     </View>
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: 'white', 
     textAlign: 'center',
-    fontSize: 50
+    fontSize: 15
   }, 
   mainButtonOne: {
     borderWidth: 2,

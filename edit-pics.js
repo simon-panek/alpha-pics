@@ -7,6 +7,7 @@ import Header from './Header';
 export default function EditPics(){
 
   const [selectedValue, setSelectedValue] = useState('');
+  const [description, setDescription] = useState('');
 
   return (
     <View>
@@ -56,8 +57,14 @@ export default function EditPics(){
         </Picker>
       </View>
       <View style={styles.mainButtonTwo}>
+        <TextInput 
+          style={{ height: '15%', width: '150%', borderColor: 'black', borderWidth: 1 }}
+          placeholder={ (description === '')? 'Enter Description Here' : description }
+          onChangeText={text => setDescription(text)}
+          value={description}
+        />  
         <Text style={styles.text}>
-          Image Label Here pre-populated with existing
+          {description}
         </Text>
       </View>
       <View style={styles.mainButtonTwo}>
